@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"> -->
+	<meta name='viewport' content='user-scalable=0'>
+	<TITLE>HTML5開發的撲克牌</TITLE>
+	<LINK href="./index_files/blackjack.css" rel="stylesheet" type="text/css">
+	<STYLE type="text/css">
+		<!--
+		html,
+		body {
+			margin: 0px;
+			padding: 0px;
+			color: #FFF;
+			background-color: #000;
+			background-image: url(img/Floor.jpg);
+			background-repeat: repeat;
+			background-position: top center;
+			background-attachment: scroll;
+			min-width: 1000px;
+			min-height: 500px;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			overflow: hidden;
+		}
+
+		body,
+		td,
+		th {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			font-size: 14px;
+		}
+
+		a,
+		a:link,
+		a:visited {
+			color: #FFF;
+			text-decoration: none;
+		}
+		-->
+	</STYLE>
+	<SCRIPT type="text/javascript" src="./index_files/jquery-1.4.2.min.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="./index_files/zach.min.js"></SCRIPT>
+	<SCRIPT type="text/javascript" src="./index_files/modernizr-1.1.min.js"></SCRIPT>
+	
+	<SCRIPT type="text/javascript" src="./index_files/blackjack.min.js"></SCRIPT>
+</HEAD>
+
+<BODY>
+	<div id="Table">
+		<div id="Hands">
+			<div id="Player"><span class="Payout"></span><span class="Wager"></span><span class="Score">0</span></div>
+			<div id="Dealer"><span class="Score">0</span></div>
+		</div>
+		<div id="Shoe"></div>
+		<div id="Discard"></div>
+		<div id="Cards">
+
+		</div>
+		<div id="Chips">
+			<a href="#" id="Bet5" class="Chip Locked" title="$5"></a>
+			<a href="#" id="Bet25" class="Chip Locked" title="$25"></a>
+			<a href="#" id="Bet50" class="Chip Locked" title="$50"></a>
+			<a href="#" id="Bet100" class="Chip Locked" title="$100"></a>
+			<a href="#" id="Bet500" class="Chip Locked" title="$500"></a>
+		</div>
+		<div id="Actions">
+			<a href="#" id="Stand" class="Action Locked" title="看牌"></a>
+			<a href="#" id="Hit" class="Action Locked" title="加牌"></a>
+			<a href="#" id="Split" class="Action Locked" title="分開"></a>
+			<a href="#" id="DoubleDown" class="Action Locked" title="加倍"></a>
+			<a href="#" id="Surrender" class="Action Locked" title="棄權"></a>
+		</div>
+		<div id="Cash">
+			$ 0
+		</div>
+		<div id="Options">
+			<a href="#" id="Deal" class="Option" title="發牌">發牌</a>
+			<a href="#" id="CancelWager" class="Option" title="Clear Wager">Clear</a>
+		</div>
+		<div id="Message">
+		</div>
+		<div id="Logo">
+		</div>
+		<audio src="audio/bg2.mp3" loop id="bgAudio"></audio>
+	</div>
+	<div class="info">請橫屏體驗遊戲</div>
+</BODY>
