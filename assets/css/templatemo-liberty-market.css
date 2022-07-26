@@ -2343,6 +2343,102 @@ body {
   }
 }
 
+
+/* 
+---------------------------------------------
+Banner Style
+--------------------------------------------- 
+*/
+
+.mainvr-banner {
+  background-image: url(../images/360school.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 290px;
+  padding-bottom: 240px;
+  background-color: #2a2a2a;
+}
+
+.mainvr-banner h6 {
+color:#FCFB14;
+	font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 650;
+  letter-spacing: 0.5px;
+}
+
+.mainvr-banner h2 {
+  color: #FCFB14;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 66px;
+  text-transform: uppercase;
+}
+
+.mainvr-banner p {
+	 color: #FCFB14;
+	font-size: 18px;
+	font-weight: 600;
+  margin-top: 20px;
+}
+
+.mainvr-banner .buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: start;
+}
+
+.mainvr-banner .border-button {
+  margin-right: 15px;
+}
+
+.mainvr-banner .owl-banner {
+
+  margin-top: -40px;
+}
+
+.mainvr-banner .owl-nav {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  bottom: -76px;
+  text-align: center;
+}
+
+.mainvr-banner .owl-nav .owl-prev {
+  margin-right: 7.5px;
+}
+
+.mainvr-banner .owl-nav .owl-next {
+  margin-left: 7.5px;
+}
+
+.mainvr-banner .owl-nav .owl-prev span,
+.mainvr-banner .owl-nav .owl-next span  {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 24px;
+  display: inline-block;
+  color: #7453fc;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all .3s;
+}
+
+.mainvr-banner .owl-nav .owl-prev span:hover,
+.mainvr-banner .owl-nav .owl-next span:hover {
+  opacity: 1;
+}
+
+
+/* 
+---------------------------------------------
+Banner Style
+--------------------------------------------- 
+*/
 @media (max-width: 1200px) {
   
 }
