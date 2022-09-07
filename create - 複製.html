@@ -99,17 +99,23 @@ UserName {
        sub_T.value=s;
 		   
    var n=result.name;
-	var name_T=document.getElementById("UsrName");	 
-		name_T.innerHTML="親愛的<span style='color:#ffffff'>"+n+"</span>你好,";;   
+	var name_T=document.getElementById("name");	 
+		name_T.value=n;   
 	  	
 	var p=result.picture;
 	var picture_T=document.getElementById("picture");	 
 		picture_T.value=p;  
 		   
-			
+			var HelloWord="<h6>親愛的<span style='color:#ffffff'>"+n+"</span>你好,</h6>";
+		   HelloWord +="<p>歡迎你申請本站會員!</p>";
+		   HelloWord +="<p>你已成功註冊為本站的正式會員</p>";
+		   HelloWord +="<p>你現在可以前往申請VR學園資格</p>";
+		   		   HelloWord +="<p>或前往鴻天遊樂場參加競賽</p>";
+		   		   		   HelloWord +="<p>開始你的旅程吧</p>";
+
 
 		   
-	
+	document.getElementById("Welcome").innerHTML  = HelloWord;
 	document.getElementById("usrPic").src=p;	   
 	   }
     }); 			
@@ -185,37 +191,48 @@ UserName {
 <div class="item-details-page">
   <div class="container">
       <div class="row">
-        
+        <div class="col-lg-12">
 							 <input type="hidden" id="token" >  
 							 <input type="hidden" id="sub" name="sub">  
 							 <input type="hidden" id="name" name="name">  
 							 <input type="hidden" id="picture" name="picture">  
-		
-           <div class="col-lg-12">
-          <div class="section-heading">
-            <div class="line-dec"></div>
-            <h2><em>感謝你註冊本站會員</em></h2>
-          </div>
-        </div>
-        
-        <div class="col-lg-5 align-self-center">
-          <h4><div id="UsrName">親愛的<span style='color:#ffffff'>會員</span>你好,</div></h4>
-          <span class="author">
-            <img src="assets/images/author-02.jpg" alt="" style="max-width: 50px; border-radius: 50%;" id="usrPic">
-            <h4>歡迎你申請本站會員<br><a href="index.html">www.a1617.com</a></h4>
-          </span>
-          <p>你已成功註冊為本站的正式會員，你現在可以前往申請VR學園資格，或前往鴻天遊樂場參加競賽，開始你的旅程吧</p>
+		<div class="row">
+             <div class="col">
+               <h4>感謝你註冊本站會員</h4>
+                 <span class="author">
+                  <img src="" style="max-width: 150px;max-height: 150px; border-radius: 50%;" id="usrPic">
+                    <p><div id ="Welcome"></div></P>
+                    
+                 </span>
+              </div> 
+            </div>					 
           
         </div>
-       <div class="col-lg-7">
-          <div class="left-image">
-           <img src="assets/images/L_gainfriends_qr.png" alt="" style="border-radius: 20px;">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <div class="line-dec"></div>
+            <h2>將 <em>鴻天Bot</em> 加為好友.</h2>
           </div>
-        </div> 
-      </div>    
-      
-        
-        
+        </div>
+        <div class="col-lg-7">
+          <div class="left-image">
+            <img src="assets/images/L_gainfriends_qr.png" alt="" style="border-radius: 20px;">
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <h4>鴻天BOT小幫手</h4>
+          <span class="author">
+            <img src="assets/images/c333cd.png" alt="" style="max-width: 50px;max-height: 50px; border-radius: 50%;">
+            <h6>Line ID<br><a href="https://page.line.me/110nftys">@110nftys</a></h6>
+          </span>
+          <span>
+          <ol>1、每日抽優惠券，最高可獲無價服務項目</ol>
+          <ol>2、獲取遊樂幣</ol>
+          <ol>3、進入遊樂場競賽 </ol>
+          <ol>4、括括樂大獎 </ol>
+          <p>&nbsp;</p>
+          </span>
+        </div>
       </div>
     </div>
   </div>
