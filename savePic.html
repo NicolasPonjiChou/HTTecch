@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="./html2canvas.js"></script>   
+</head>
+
+<body>
+<!--儲存html圖片容器-->
+
+<img class="htmlimg" src="./img/promo7.jpg" alt="">
+
+<div class="contentbox" style="font-size: 36px">長按圖片，選擇【儲存照片】</div>
+</body>
+</html>
+<script>
+//把html生成圖片
+
+htmltoimg() {
+
+let w = $(".contentbox").width();
+
+let h = $(".contentbox").height();//要將 canvas 的寬高設定成容器寬高的 2 倍
+
+let canvas = document.createElement("canvas");
+
+canvas.width = w * 2;
+
+canvas.height = h * 2;
+
+canvas.style.width = w + "px";
+
+canvas.style.height = h + "px";
+
+let context = canvas.getContext("2d");//然後將畫布縮放，將影象放大兩倍畫到畫布上
+
+context.scale(2, 2);
+
+html2canvas($(".contentbox"), {
+
+canvas: canvas,
+
+onrendered: function (canvas) {
+
+let dataUrl = canvas.toDataURL();
+
+$(".htmlimg").attr("src", dataUrl);
+
+$(".htmlimg").css({
+
+"width": canvas.width / 2 + "px",
+
+"height": canvas.height / 2 + "px",
+
+})
+
+}
+
+});
+
+//隱藏html元素
+
+$(".centercontent").hide();
+
+}
+//儲存圖片至本地
+
+saveimg() {
+
+// 圖片匯出為 png 格式
+
+var type = 'png';
+
+var imgData = $(".htmlimg").attr("src");
+
+var _fixType = function (type) {
+
+type = type.toLowerCase().replace(/jpg/i, 'jpeg');
+
+var r = type.match(/png|jpeg|bmp|gif/)[0];
+
+return 'image/' + r;
+
+};
+
+// 加工image data，替換mime type
+
+imgData = imgData.replace(_fixType(type), 'image/octet-stream');
+
+ // 下載後的問題名
+
+// var filename = 'membercar' + (new Date()).getTime() + '.' + type;
+
+var filename = 'membercar' + '.' + type;
+
+ 
+
+this.saveFile(imgData, filename);
+
+}	
+/**
+
+* 在本地進行檔案儲存
+
+* @param {String} data 要儲存到本地的圖片資料
+
+* @param {String} filename 檔名
+
+*/
+
+saveFile(data, filename) {
+
+let save_link: any = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+
+save_link.href = data;
+
+save_link.download = filename;
+
+var event = document.createEvent('MouseEvents');
+
+event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+
+save_link.dispatchEvent(event);
+
+}
+	
+</script>
