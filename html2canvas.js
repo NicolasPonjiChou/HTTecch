@@ -1,8 +1,4 @@
 // JavaScript Document/*!
- * html2canvas 1.4.1 <https://html2canvas.hertzen.com>
- * Copyright (c) 2022 Niklas von Hertzen <https://hertzen.com>
- * Released under MIT License
- */
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
@@ -4223,7 +4219,7 @@
         testElement.style.wordSpacing = '0px';
         document.body.appendChild(testElement);
         var range = document.createRange();
-        testElement.innerHTML = typeof ''.repeat === 'function' ? '&#128104;'.repeat(10) : '';
+        testElement.innerHTML = typeof ''.repeat === 'function' ? ''.repeat(10) : '';
         var node = testElement.firstChild;
         var textList = toCodePoints$1(node.data).map(function (i) { return fromCodePoint$1(i); });
         var offset = 0;
